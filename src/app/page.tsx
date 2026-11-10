@@ -1,0 +1,1 @@
+export default function Home(){return <main><h1>Dost core</h1><p>Development backend and synthetic evaluation tools. The conversation UI is a separate workstream.</p><p>See README.md for setup and current limitations.</p></main>;}

@@ -1,0 +1,34 @@
+{
+  "name": "dost-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dost conversation backend and synthetic evaluation tools",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "node --no-warnings --test \"src/**/*.test.ts\"",
+    "test:bridge": "npm --prefix bridge test",
+    "test:conversation-eval": "node --test scripts/conversation-eval/*.test.mjs",
+    "test": "npm run test:unit && npm run test:bridge && npm run test:conversation-eval",
+    "eval:conversation": "node scripts/evaluate-conversation-intelligence.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.47.10",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
