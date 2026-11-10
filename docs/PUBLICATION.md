@@ -7,3 +7,7 @@ Included: backend/API foundation, persona and planner, provider adapters, contex
 Excluded: B's UI, browser microphone widgets, voice preview/listening study, video/editor assets, all real recordings/profiles/databases, environment values, model weights, dependencies, build output, runtime logs, local handoff paths, failed candidate archives, bulk reports, destructive database administration scripts and legacy cloud deployment/scheduler files.
 
 One stale recorder test was corrected to expect the existing bounded copy retry (two attempted generations), assert a single retry, and still require final rejection; no provider retry behavior changed. The elder evaluator's source fingerprint targets this repository's actual core files instead of omitted UI/handoff files; its self-test uses the bundled fictional development fixture. No files were deleted from the original project. No failed candidate was promoted. No live model/provider calls are needed to run the regression suites. Final validation receipts and the file/commit manifest are retained locally by the publisher.
+
+## B integration
+
+The later B experience series adds the active conversation UI and listening tools. Its exact scope and limits are documented in [B-PUBLICATION.md](B-PUBLICATION.md). Earlier core-only exclusions above describe the original A snapshot, not a claim that these interfaces remain absent after B integration.
