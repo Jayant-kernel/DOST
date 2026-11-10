@@ -1,0 +1,4 @@
+﻿import {test} from 'node:test';import assert from 'node:assert/strict';import {localRetry} from './local-retry.ts';
+test('local inference retries one transient response, never loops',async()=>{let n=0;const r=await localRetry(async()=>new Response(null,{status:++n===1?503:200}));assert.equal(r.status,200);assert.equal(n,2);n=0;await localRetry(async()=>{n++;return new Response(null,{status:503});});assert.equal(n,2);});
+test('authorization and client errors are not retried',async()=>{let n=0;await localRetry(async()=>{n++;return new Response(null,{status:403});});assert.equal(n,1);});
+test('cancellation during backoff prevents a second request',async()=>{const c=new AbortController();let n=0;const p=localRetry(async()=>{n++;c.abort();return new Response(null,{status:503});},c.signal);await assert.rejects(p);assert.equal(n,1);});
