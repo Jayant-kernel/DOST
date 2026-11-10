@@ -1,0 +1,85 @@
+{
+  "synthetic": true,
+  "realParticipantAudio": false,
+  "source": "Existing fixed Hindi scripts; no regeneration during publication",
+  "model": "timbre-v3.0",
+  "voice": "Shivani",
+  "humanRatingsCollectedByThisImport": 0,
+  "files": [
+    {
+      "file": "fixtures/voice/audio/greeting-existing.wav",
+      "bytes": 174124,
+      "sha256": "6419a1c76f8d5ad3f7b62fc17d629532a4ed606084b1d9ca64b01985ee34a822"
+    },
+    {
+      "file": "fixtures/voice/audio/greeting-expressive.wav",
+      "bytes": 174124,
+      "sha256": "6419a1c76f8d5ad3f7b62fc17d629532a4ed606084b1d9ca64b01985ee34a822"
+    },
+    {
+      "file": "fixtures/voice/audio/greeting-neutral.wav",
+      "bytes": 174124,
+      "sha256": "6419a1c76f8d5ad3f7b62fc17d629532a4ed606084b1d9ca64b01985ee34a822"
+    },
+    {
+      "file": "fixtures/voice/audio/happy-news-existing.wav",
+      "bytes": 145964,
+      "sha256": "45de8b7b400d52524c31ca4555321b59255d740b036fbaa866db143d916c0143"
+    },
+    {
+      "file": "fixtures/voice/audio/happy-news-expressive.wav",
+      "bytes": 153644,
+      "sha256": "ea6651e3d848b16b4b54017de33eef2b5d01be4f8cc0c4b0db1dd923687882ff"
+    },
+    {
+      "file": "fixtures/voice/audio/happy-news-neutral.wav",
+      "bytes": 145964,
+      "sha256": "45de8b7b400d52524c31ca4555321b59255d740b036fbaa866db143d916c0143"
+    },
+    {
+      "file": "fixtures/voice/audio/loneliness-existing.wav",
+      "bytes": 151084,
+      "sha256": "ee13bb5f6de8790c5c652b0ce330b0f1c9c9bc1f136d2085ec9a7cde9f087ed5"
+    },
+    {
+      "file": "fixtures/voice/audio/loneliness-expressive.wav",
+      "bytes": 207404,
+      "sha256": "a42f4a3ba6eefe144307852ef60d4f9bdd8c14f8f378bb2fdfd1741a178b0bed"
+    },
+    {
+      "file": "fixtures/voice/audio/loneliness-neutral.wav",
+      "bytes": 151084,
+      "sha256": "ee13bb5f6de8790c5c652b0ce330b0f1c9c9bc1f136d2085ec9a7cde9f087ed5"
+    },
+    {
+      "file": "fixtures/voice/audio/reassurance-existing.wav",
+      "bytes": 143404,
+      "sha256": "8fb04f457bd8623e4dc5979d040398e1c930a79aac1d35f848528d013cda4cc8"
+    },
+    {
+      "file": "fixtures/voice/audio/reassurance-expressive.wav",
+      "bytes": 174124,
+      "sha256": "6629df3c9999d2e650cfcf25d5014d2938aa1447d210fc5dc8de74dfb2e2a79e"
+    },
+    {
+      "file": "fixtures/voice/audio/reassurance-neutral.wav",
+      "bytes": 143404,
+      "sha256": "8fb04f457bd8623e4dc5979d040398e1c930a79aac1d35f848528d013cda4cc8"
+    },
+    {
+      "file": "fixtures/voice/audio/story-existing.wav",
+      "bytes": 189484,
+      "sha256": "17882a4ef85da7825679c638bed14e3cddbb35086f230291c4cd51464fc33c6e"
+    },
+    {
+      "file": "fixtures/voice/audio/story-expressive.wav",
+      "bytes": 209964,
+      "sha256": "9319a4b7ac464f1beba7b8b7f225b93704324d9e7872e729eac8fa1d5f6b01f7"
+    },
+    {
+      "file": "fixtures/voice/audio/story-neutral.wav",
+      "bytes": 189484,
+      "sha256": "17882a4ef85da7825679c638bed14e3cddbb35086f230291c4cd51464fc33c6e"
+    }
+  ]
+}
