@@ -1,0 +1,23 @@
+{
+  "fictional": true,
+  "provenance": "Minimal frozen synthetic regression extracted from phase2-unseen-local.json",
+  "rows": [
+    {
+      "scenario": "p2-bus-stop-tale",
+      "turn": 1,
+      "failureDetail": "behaviour-rejected",
+      "stop": "eos",
+      "decision": {
+        "action": "ANSWER",
+        "questionNeeded": false,
+        "maxTokens": 160,
+        "length": "normal",
+        "reason": "direct-request",
+        "topic": "story"
+      },
+      "rawResponse": "एक बस अड्डे पर एक बूढ़ी औरत, जो अपनी छड़ी के सहारे चल रही थी, अचानक लड़खड़ा गई। एक युवक, जो बस का इंतज़ार कर रहा था, ने उसे देखा और तुरंत उसकी मदद के लिए दौड़ पड़ा। उसने बूढ़ी औरत को सहारा दिया और उसे बस के पास ले गया। बूढ़ी औरत ने युवक को धन्यवाद दिया और कहा, \"तुमने मेरी जान बचा ली।\" युवक मुस्कुराया और कहा, \"मैं तो बस एक छोटा सा मददगार हूँ।\"",
+      "prior": [],
+      "input": "एक छोटी कहानी सुनाइए जिसमें बस अड्डे पर किसी की मदद होती हो।"
+    }
+  ]
+}

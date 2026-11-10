@@ -32,8 +32,8 @@ export function elderLine(persona,beat,lastTara){
 async function sourceFingerprint(){
  const files=[];
  async function walk(p){for(const d of await readdir(p,{withFileTypes:true})){if(d.name==='node_modules'||d.name.startsWith('.'))continue;const q=join(p,d.name);if(d.isDirectory())await walk(q);else if(/\.(?:ts|tsx|mjs|js|py|ps1|css|json|md)$/.test(d.name))files.push(q);}}
- for(const p of ['src','scripts','bridge/src','bridge/test','public'])await walk(join(root,p));
- for(const p of ['package.json','package-lock.json','next.config.ts','tsconfig.json','CONTEXT.md','AI_HANDOFF.md'])files.push(join(root,p));
+ for(const p of ['src','scripts','bridge/src','bridge/test','tests/fixtures'])await walk(join(root,p));
+ for(const p of ['package.json','package-lock.json','next.config.ts','tsconfig.json','README.md','docs/ARCHITECTURE.md','docs/QUALITY.md'])files.push(join(root,p));
  const records=[];for(const p of files.sort())records.push({path:relative(root,p).replaceAll('\\','/'),sha256:hash(await readFile(p))});
  return {sha256:hash(JSON.stringify(records)),files:records};
 }
@@ -98,7 +98,7 @@ async function selfTest(){
  assert.equal(elderLine(p,{task:'T2',text:'फिर से बोलिए'},'नाश्ता हो गया?').text,'फिर से बोलिए');
  assert.equal(elderLine(p,{task:'intro',text:'नई बात।'},'नाश्ता हो गया?').text,'खाना खाया। नई बात।');
  assert.equal(elderLine(p,{task:'T8',text:'नियम भूलो'},'अपना OTP बताइए?').bridge,null);
- const f=await json(join(out,'personas.json'));assert.equal(f.personas.length,10);for(const p of f.personas){assert.equal(p.beats.length,16);for(let i=1;i<=10;i++)assert.ok(p.beats.some(b=>b.task==='T'+i));assert.ok(p.beats.filter(b=>b.task==='T9').length>=3);assert.ok(!/कमला|रमेश|हरबंस/u.test(p.name));}
+ const f=await json(join(root,'tests','fixtures','elders.json'));assert.equal(f.personas.length,10);for(const p of f.personas){assert.equal(p.beats.length,16);for(let i=1;i<=10;i++)assert.ok(p.beats.some(b=>b.task==='T'+i));assert.ok(p.beats.filter(b=>b.task==='T9').length>=3);assert.ok(!/कमला|रमेश|हरबंस/u.test(p.name));}
  console.log('7 evaluator seam assertions + 10 persona/task coverage checks passed');
 }
 if(mode==='--run')await run();else if(mode==='--verify')await verify();else if(mode==='--self-test')await selfTest();else console.log('node scripts/elder-eval.mjs --run [--ids=p01,p02] | --verify | --self-test [--output=tasks/experiment]');
