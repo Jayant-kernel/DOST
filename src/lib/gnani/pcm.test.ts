@@ -1,0 +1,3 @@
+﻿import {test} from 'node:test';import assert from 'node:assert/strict';import {PcmFrames,pcmWav} from './pcm.ts';
+test('PCM sample boundaries survive odd transport chunks',()=>{const f=new PcmFrames();assert.deepEqual([...f.push(new Uint8Array([0]))],[]);assert.deepEqual([...f.push(new Uint8Array([128,255,127]))],[-1,32767/32768]);f.finish();});
+test('incomplete samples reject and replay WAV has exact PCM payload',()=>{const f=new PcmFrames();f.push(new Uint8Array([1]));assert.throws(()=>f.finish());const wav=pcmWav(new Uint8Array([0,128]));assert.equal(wav.length,46);assert.equal(new DataView(wav.buffer).getUint32(24,true),16000);assert.deepEqual([...wav.slice(44)],[0,128]);});
