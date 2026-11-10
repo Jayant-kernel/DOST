@@ -2,7 +2,7 @@
   "name": "dost-core",
   "version": "0.1.0",
   "private": true,
-  "description": "Dost conversation backend and synthetic evaluation tools",
+  "description": "Dost experimental Hindi voice conversation and listening evaluation",
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
@@ -11,8 +11,9 @@
     "test:unit": "node --no-warnings --test \"src/**/*.test.ts\"",
     "test:bridge": "npm --prefix bridge test",
     "test:conversation-eval": "node --test scripts/conversation-eval/*.test.mjs",
-    "test": "npm run test:unit && npm run test:bridge && npm run test:conversation-eval",
-    "eval:conversation": "node scripts/evaluate-conversation-intelligence.mjs"
+    "test": "npm run test:unit && npm run test:bridge && npm run test:conversation-eval && npm run test:voice-analysis",
+    "eval:conversation": "node scripts/evaluate-conversation-intelligence.mjs",
+    "test:voice-analysis": "node --test scripts/analyze-voice-study.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.4",
