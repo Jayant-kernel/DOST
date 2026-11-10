@@ -1,0 +1,16 @@
+{
+  "name": "dost-stt-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Prisma streaming recognition gateway",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test test/live-stt.test.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
